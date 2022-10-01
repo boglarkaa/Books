@@ -8,12 +8,15 @@ class Proiect1 {
         int option = -1, i;
         System.out.print("How many books do you have in your library? ");
         int numOfBooks = scanner.nextInt();
+        scanner.nextLine();
         Book[] books = new Book[numOfBooks];
         Random random = new Random();
+        String title, author, genre;
+        int pages;
 
         for (i = 0; i < books.length; i++) {
             System.out.println("Give the title, author, genre and number of pages of your book");
-            books[i] = new Book(scanner.next(), scanner.next(), scanner.next(), scanner.nextInt());
+            books[i] = new Book(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextInt());
         }
         System.out.println();
 
@@ -24,8 +27,6 @@ class Proiect1 {
 
         Book temp = new Book("", "", "", 0);
         char sortOpt = '\0';
-        String title, author, genre;
-        int pages;
         int chosenBook = -1;
         int pagesToRead = -1;
 
@@ -33,17 +34,18 @@ class Proiect1 {
             System.out.println(
                     "Choose an option:\n\t1. Add a new book\n\t2. Sort your books\n\t3. Read something\n\t4. \n\t0. Exit");
             option = scanner.nextInt();
+            scanner.nextLine();
             switch (option) {
                 case 1:
                     Book newBook = new Book("", "", "", 0);
                     System.out.print("What's your new book's title? ");
-                    title = scanner.next();
+                    title = scanner.nextLine();
                     newBook.setTitle(title);
                     System.out.print("Who's your new book's author? ");
-                    author = scanner.next();
+                    author = scanner.nextLine();
                     newBook.setAuthor(author);
                     System.out.print("What's your new book's genre? ");
-                    genre = scanner.next();
+                    genre = scanner.nextLine();
                     newBook.setGenre(genre);
                     System.out.print("How many pages does your new book have? ");
                     pages = scanner.nextInt();
@@ -123,7 +125,7 @@ class Proiect1 {
                         System.out.println("\t" + (i + 1) + ". " + books[i].getTitle() + " by " + books[i].getAuthor());
                     }
                     chosenBook = scanner.nextInt();
-                    pagesToRead = random.nextInt(150);
+                    pagesToRead = random.nextInt(100);
                     if (!books[chosenBook - 1].read(pagesToRead)) {
                         System.out.println("You want to read " + pagesToRead + " pages, but you only have "
                                 + (books[chosenBook - 1].getPages() - books[chosenBook - 1].getPagesRead())

@@ -17,6 +17,7 @@ class Proiect1 {
         for (i = 0; i < books.length; i++) {
             System.out.println("Give the title, author, genre and number of pages of your book");
             books[i] = new Book(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextInt());
+            scanner.nextLine();
         }
         System.out.println();
 

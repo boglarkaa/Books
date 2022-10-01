@@ -33,7 +33,7 @@ class Proiect1 {
 
         while (option != 0) {
             System.out.println(
-                    "Choose an option:\n\t1. Add a new book\n\t2. Sort your books\n\t3. Read something\n\t4. \n\t0. Exit");
+                    "Choose an option:\n\t1. Add a new book\n\t2. Sort your books\n\t3. Read something\n\t0. Exit");
             option = scanner.nextInt();
             scanner.nextLine();
             switch (option) {
@@ -138,8 +138,6 @@ class Proiect1 {
                                 "You have " + (books[chosenBook - 1].getPages() - books[chosenBook - 1].getPagesRead())
                                         + " pages left of " + books[chosenBook - 1].getTitle());
                     }
-                    break;
-                case 4:
                     break;
                 case 0:
                     break;

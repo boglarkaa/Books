@@ -123,7 +123,7 @@ class Proiect1 {
                         System.out.println("\t" + (i + 1) + ". " + books[i].getTitle() + " by " + books[i].getAuthor());
                     }
                     chosenBook = scanner.nextInt();
-                    pagesToRead = random.nextInt(50);
+                    pagesToRead = random.nextInt(150);
                     if (!books[chosenBook - 1].read(pagesToRead)) {
                         System.out.println("You want to read " + pagesToRead + " pages, but you only have "
                                 + (books[chosenBook - 1].getPages() - books[chosenBook - 1].getPagesRead())

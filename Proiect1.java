@@ -66,7 +66,7 @@ class Proiect1 {
                 case 2:
                     while (sortOpt != 'x') {
                         System.out.println(
-                                "Choose an option:\n\ta. Sort aphabetically by title\n\tb. Sort aphabetically by author\n\tc. Sort by number of pages\n\tx. Exit");
+                                "Choose an option:\n\ta. Sort aphabetically by title\n\tb. Sort aphabetically by author\n\tc. Sort by number of pages left to read\n\tx. Exit");
                         sortOpt = scanner.next().charAt(0);
                         switch (sortOpt) {
                             case 'a':

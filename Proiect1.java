@@ -72,7 +72,7 @@ class Proiect1 {
                         System.out.println("\t" + (i + 1) + ". " + books[i].getTitle() + " by " + books[i].getAuthor());
                     }
                     chosenBook = scanner.nextInt();
-                    pagesToRead = random.nextInt(100);
+                    pagesToRead = random.nextInt(50);
                     // se verifica daca este posibila citirea atator pagini cate au fost generate
                     // random
                     if (!books[chosenBook - 1].read(pagesToRead)) {

@@ -65,7 +65,6 @@ public class Book {
         return true;
     }
 
-    //test
     public String toString() {
         StringBuffer str = new StringBuffer();
         str.append("\nTitle:  ");
